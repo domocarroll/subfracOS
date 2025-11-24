@@ -30,7 +30,7 @@ While Zed is built for speed and collaboration, subfracOS is built for **context
 - Docker (for MCP Gateway)
 - GitHub token (for MCP features)
 - Danni binary (for AI strategist integration) - see [DANNI_INTEGRATION.md](DANNI_INTEGRATION.md)
-- Anthropic API key (for Danni and Claude integration)
+- Claude CLI authenticated (`claude auth` - for Danni)
 
 ### Build from Source
 
@@ -46,18 +46,20 @@ cargo build --release
 
 ### First Launch Setup
 
-1. Set environment variables:
+1. Set environment variable:
    ```bash
    export GITHUB_TOKEN=your_token_here
-   export ANTHROPIC_API_KEY=your_anthropic_key_here
    ```
 
-2. Install Danni (optional but recommended):
+2. Install and authenticate Danni (optional but recommended):
    ```bash
    # Build from source
    cd /path/to/danni-goose-fork
    cargo build --release --bin danni
    sudo cp target/release/danni /usr/local/bin/
+
+   # Authenticate Claude CLI (Danni uses this)
+   claude auth
    ```
 
 3. Launch subfracOS:

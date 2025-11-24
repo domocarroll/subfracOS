@@ -36,18 +36,24 @@ Danni is **preconfigured** in subfracOS. When you first launch subfracOS, Danni 
       "command": "danni",
       "args": ["acp"],
       "env": {
-        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
+        "DANNI_PROVIDER": "claude-code"
       }
     }
   }
 }
 ```
 
+**Provider Options:**
+- `claude-code` (default) - Uses Claude CLI, no API key needed
+- `anthropic` - Direct API calls, requires `ANTHROPIC_API_KEY` env var
+
 ### Prerequisites
 
 1. **Danni installed** - The `danni` binary must be in your `$PATH`
-2. **Anthropic API key** - Set `ANTHROPIC_API_KEY` environment variable
+2. **Claude CLI authenticated** - Run `claude auth` to sign in
 3. **subfracOS** - Running the latest build
+
+**Note:** Danni uses the Claude CLI provider by default, which uses your authenticated Claude account. No API key needed!
 
 ### Installation
 
@@ -64,9 +70,20 @@ which danni
 danni --version
 ```
 
-**Set API key:**
+**Authenticate Claude CLI:**
 ```bash
-# Add to your shell rc file (.zshrc, .bashrc, etc.)
+# One-time setup - authenticate with your Claude account
+claude auth
+
+# Verify authentication
+claude --version
+```
+
+**Alternative: Use Direct API (optional)**
+If you prefer direct API calls instead of Claude CLI:
+```bash
+# Set provider to anthropic
+export DANNI_PROVIDER=anthropic
 export ANTHROPIC_API_KEY="your_api_key_here"
 ```
 

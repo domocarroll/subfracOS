@@ -24,13 +24,14 @@
     }
   },
   // Danni - Subfracture's AI strategist (ACP-compatible)
+  // Uses Claude CLI (no API key needed - uses your authenticated Claude account)
   "agent_servers": {
     "danni": {
       "command": "danni",
       "args": ["acp"],
       "env": {
-        // Danni will use your Anthropic API key for Claude models
-        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
+        // Tell Danni to use Claude CLI provider instead of direct API
+        "DANNI_PROVIDER": "claude-code"
       }
     }
   },

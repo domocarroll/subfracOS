@@ -23,6 +23,17 @@
       }
     }
   },
+  // Danni - Subfracture's AI strategist (ACP-compatible)
+  "agent_servers": {
+    "danni": {
+      "command": "danni",
+      "args": ["acp"],
+      "env": {
+        // Danni will use your Anthropic API key for Claude models
+        "ANTHROPIC_API_KEY": "${ANTHROPIC_API_KEY}"
+      }
+    }
+  },
   // Subfracture-optimized defaults
   "vim_mode": false,
   "auto_save": "on_focus_change",

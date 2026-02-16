@@ -1,4 +1,4 @@
-source $OMARCHY_INSTALL/helpers/chroot.sh
-source $OMARCHY_INSTALL/helpers/presentation.sh
-source $OMARCHY_INSTALL/helpers/errors.sh
-source $OMARCHY_INSTALL/helpers/logging.sh
+source $SUBFRAC_INSTALL/helpers/chroot.sh
+source $SUBFRAC_INSTALL/helpers/presentation.sh
+source $SUBFRAC_INSTALL/helpers/errors.sh
+source $SUBFRAC_INSTALL/helpers/logging.sh

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STATE_FILE=~/.local/state/omarchy/toggles/screensaver-off
+STATE_FILE=~/.local/state/subfrac/toggles/screensaver-off
 
 if [[ -f $STATE_FILE ]]; then
   rm -f $STATE_FILE

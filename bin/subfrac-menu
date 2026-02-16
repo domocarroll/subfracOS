@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH="$HOME/.local/share/omarchy/bin:$PATH"
+export PATH="$HOME/.local/share/subfrac/bin:$PATH"
 
 # Set to true when going directly to a submenu, so we can exit directly
 BACK_TO_EXIT=false
@@ -147,8 +147,8 @@ show_style_menu() {
   *Font*) show_font_menu ;;
   *Background*) subfrac-theme-bg-next ;;
   *Hyprland*) open_in_editor ~/.config/hypr/looknfeel.conf ;;
-  *Screensaver*) open_in_editor ~/.config/omarchy/branding/screensaver.txt ;;
-  *About*) open_in_editor ~/.config/omarchy/branding/about.txt ;;
+  *Screensaver*) open_in_editor ~/.config/subfrac/branding/screensaver.txt ;;
+  *About*) open_in_editor ~/.config/subfrac/branding/about.txt ;;
   *) show_main_menu ;;
   esac
 }
@@ -312,7 +312,7 @@ show_install_gaming_menu() {
 show_install_style_menu() {
   case $(menu "Install" "󰸌  Theme\n  Background\n  Font") in
   *Theme*) present_terminal subfrac-theme-install ;;
-  *Background*) nautilus ~/.config/omarchy/current/theme/backgrounds ;;
+  *Background*) nautilus ~/.config/subfrac/current/theme/backgrounds ;;
   *Font*) show_install_font_menu ;;
   *) show_install_menu ;;
   esac

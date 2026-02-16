@@ -12,7 +12,7 @@ echo "Update Walker configs"
 subfrac-refresh-walker
 
 echo "Copy hooks examples"
-cp -r $OMARCHY_PATH/config/omarchy/* $HOME/.config/omarchy/
+cp -r $SUBFRAC_PATH/config/omarchy/* $HOME/.config/subfrac/
 
 echo "Add packages for updated subfrac-cmd-screenshot"
 subfrac-pkg-add grim slurp wayfreeze-git

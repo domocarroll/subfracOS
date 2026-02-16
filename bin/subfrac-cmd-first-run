@@ -2,18 +2,18 @@
 
 set -e
 
-FIRST_RUN_MODE=~/.local/state/omarchy/first-run.mode
+FIRST_RUN_MODE=~/.local/state/subfrac/first-run.mode
 
 if [[ -f "$FIRST_RUN_MODE" ]]; then
   rm -f "$FIRST_RUN_MODE"
 
-  bash "$OMARCHY_PATH/install/first-run/battery-monitor.sh"
-  bash "$OMARCHY_PATH/install/first-run/cleanup-reboot-sudoers.sh"
-  bash "$OMARCHY_PATH/install/first-run/firewall.sh"
-  bash "$OMARCHY_PATH/install/first-run/dns-resolver.sh"
-  bash "$OMARCHY_PATH/install/first-run/gnome-theme.sh"
+  bash "$SUBFRAC_PATH/install/first-run/battery-monitor.sh"
+  bash "$SUBFRAC_PATH/install/first-run/cleanup-reboot-sudoers.sh"
+  bash "$SUBFRAC_PATH/install/first-run/firewall.sh"
+  bash "$SUBFRAC_PATH/install/first-run/dns-resolver.sh"
+  bash "$SUBFRAC_PATH/install/first-run/gnome-theme.sh"
   sudo rm -f /etc/sudoers.d/first-run
 
-  bash "$OMARCHY_PATH/install/first-run/welcome.sh"
-  bash "$OMARCHY_PATH/install/first-run/wifi.sh"
+  bash "$SUBFRAC_PATH/install/first-run/welcome.sh"
+  bash "$SUBFRAC_PATH/install/first-run/wifi.sh"
 fi

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STATE_DIR="$HOME/.local/state/omarchy"
+STATE_DIR="$HOME/.local/state/subfrac"
 mkdir -p "$STATE_DIR"
 
 COMMAND="$1"

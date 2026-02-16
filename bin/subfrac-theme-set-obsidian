@@ -2,7 +2,7 @@
 
 # subfrac-theme-set-obsidian: Bootstrap and update Omarchy theme for Obsidian
 #
-# - Ensures registry at ~/.local/state/omarchy/obsidian-vaults
+# - Ensures registry at ~/.local/state/subfrac/obsidian-vaults
 #   - Populates by extracting vault paths from ~/.config/obsidian/obsidian.json
 # - For each valid vault:
 #   - Ensures .obsidian/themes/Omarchy/{manifest.json, theme.css}
@@ -10,7 +10,7 @@
 
 # Theme automagic generation logic:
 #
-# - Background/foreground: read from ~/.config/omarchy/current/theme/alacritty.toml [colors.primary]
+# - Background/foreground: read from ~/.config/subfrac/current/theme/alacritty.toml [colors.primary]
 #   (background/foreground). Fallbacks: bg=#1a1b26, fg=#a9b1d6. Compute bg brightness for light/dark handling.
 # - Palette extraction: collect colors from Alacritty (primary/normal/bright/dim/selection), Waybar (@define-color),
 #   and Hyprland (col.*_border; rgba->hex). Normalize, dedupe, and count frequencies.
@@ -23,8 +23,8 @@
 #   If missing, background = 75% bg + 25% fg; text chosen for contrast vs selection background.
 # - Fonts: monospace from Alacritty [font] or fontconfig monospace; UI font from fontconfig sans-serif.
 
-VAULTS_FILE="$HOME/.local/state/omarchy/obsidian-vaults"
-CURRENT_THEME_DIR="$HOME/.config/omarchy/current/theme"
+VAULTS_FILE="$HOME/.local/state/subfrac/obsidian-vaults"
+CURRENT_THEME_DIR="$HOME/.config/subfrac/current/theme"
 
 ensure_vaults_file() {
   mkdir -p "$(dirname "$VAULTS_FILE")"

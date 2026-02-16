@@ -38,7 +38,7 @@ if $NEEDS_MIGRATION; then
 
   subfrac-pkg-add "${PACKAGES[@]}"
 
-  source $OMARCHY_PATH/install/config/walker-elephant.sh
+  source $SUBFRAC_PATH/install/config/walker-elephant.sh
 
   rm -rf ~/.config/walker/themes
   subfrac-refresh-walker

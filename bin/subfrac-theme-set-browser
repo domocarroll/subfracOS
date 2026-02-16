@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CHROMIUM_THEME=~/.config/omarchy/current/theme/chromium.theme
+CHROMIUM_THEME=~/.config/subfrac/current/theme/chromium.theme
 
 if subfrac-cmd-present chromium || subfrac-cmd-present helium-browser || subfrac-cmd-present brave; then
   if [[ -f $CHROMIUM_THEME ]]; then
@@ -16,7 +16,7 @@ if subfrac-cmd-present chromium || subfrac-cmd-present helium-browser || subfrac
     rm -f /etc/chromium/policies/managed/color.json
     chromium --no-startup-window --set-theme-color="$THEME_RGB_COLOR"
 
-    if [[ -f ~/.config/omarchy/current/theme/light.mode ]]; then
+    if [[ -f ~/.config/subfrac/current/theme/light.mode ]]; then
       chromium --no-startup-window --set-color-scheme="light"
     else
       chromium --no-startup-window --set-color-scheme="dark"

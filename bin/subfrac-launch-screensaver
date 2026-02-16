@@ -9,7 +9,7 @@ fi
 pgrep -f "alacritty --class Screensaver" && exit 0
 
 # Allow screensaver to be turned off but also force started
-if [[ -f ~/.local/state/omarchy/toggles/screensaver-off ]] && [[ $1 != "force" ]]; then
+if [[ -f ~/.local/state/subfrac/toggles/screensaver-off ]] && [[ $1 != "force" ]]; then
   exit 1
 fi
 
@@ -21,7 +21,7 @@ for m in $(hyprctl monitors -j | jq -r '.[] | .name'); do
   # FIXME: Find a way to make this generic where we it can work for kitty + ghostty
   hyprctl dispatch exec -- \
     alacritty --class Screensaver \
-    --config-file ~/.local/share/omarchy/default/alacritty/screensaver.toml \
+    --config-file ~/.local/share/subfrac/default/alacritty/screensaver.toml \
     -e subfrac-cmd-screensaver
 done
 

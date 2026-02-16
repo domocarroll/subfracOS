@@ -3,7 +3,7 @@
 set -e
 
 COMMAND="$1"
-OMARCHY_PATH=${OMARCHY_PATH:-$HOME/.local/share/omarchy}
+SUBFRAC_PATH=${SUBFRAC_PATH:-$HOME/.local/share/subfrac}
 
 if [[ -z $COMMAND ]]; then
   echo "Usage: subfrac-snapshot <create|restore>" >&2

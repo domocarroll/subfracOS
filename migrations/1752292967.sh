@@ -15,5 +15,5 @@ if subfrac-cmd-missing uwsm; then
     sed -i 's/^GTK_IM_MODULE=fcitx$//' "$HOME/.config/environment.d/fcitx.conf"
   fi
 
-  source $OMARCHY_PATH/install/login/plymouth.sh
+  source $SUBFRAC_PATH/install/login/plymouth.sh
 fi

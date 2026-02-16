@@ -11,6 +11,6 @@ if [[ -f ~/.local/share/applications/blueberry.desktop ]]; then
   subfrac-refresh-waybar
 fi
 
-if [[ ! -L "~/.config/omarchy/themes/rose-pine" ]]; then
-  ln -snf ~/.local/share/omarchy/themes/rose-pine ~/.config/omarchy/themes/
+if [[ ! -L "~/.config/subfrac/themes/rose-pine" ]]; then
+  ln -snf ~/.local/share/subfrac/themes/rose-pine ~/.config/subfrac/themes/
 fi

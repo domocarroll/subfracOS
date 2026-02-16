@@ -1,2 +1,2 @@
 #!/bin/bash
-cat $OMARCHY_PATH/version
+cat $SUBFRAC_PATH/version

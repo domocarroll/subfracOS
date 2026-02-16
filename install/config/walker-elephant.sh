@@ -13,5 +13,5 @@ Target = elephant*
 [Action]
 Description = Restarting Walker services after system update
 When = PostTransaction
-Exec = $OMARCHY_PATH/bin/subfrac-restart-walker
+Exec = $SUBFRAC_PATH/bin/subfrac-restart-walker
 EOF

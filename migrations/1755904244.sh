@@ -2,5 +2,5 @@ echo "Update fastfetch config with new Omarchy logo"
 
 subfrac-refresh-config fastfetch/config.jsonc
 
-mkdir -p ~/.config/omarchy/branding
-cp $OMARCHY_PATH/icon.txt ~/.config/omarchy/branding/about.txt
+mkdir -p ~/.config/subfrac/branding
+cp $SUBFRAC_PATH/icon.txt ~/.config/subfrac/branding/about.txt

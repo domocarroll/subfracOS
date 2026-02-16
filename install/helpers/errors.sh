@@ -133,7 +133,7 @@ catch_errors() {
       fi
       ;;
     "Upload log for support")
-      omarchy-upload-install-log
+      subfrac-upload-install-log
       ;;
     "Exit" | "")
       exit 1

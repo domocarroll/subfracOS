@@ -1,6 +1,6 @@
 echo "Switch to Omarchy Chromium for synchronized theme switching"
 
-if omarchy-cmd-present chromium; then
+if subfrac-cmd-present chromium; then
   set_theme_colors() {
     if [[ -f ~/.config/omarchy/current/theme/chromium.theme ]]; then
       chromium --no-startup-window --set-theme-color="$(<~/.config/omarchy/current/theme/chromium.theme)"
@@ -10,8 +10,8 @@ if omarchy-cmd-present chromium; then
     fi
   }
 
-  omarchy-pkg-drop chromium
-  omarchy-pkg-add omarchy-chromium
+  subfrac-pkg-drop chromium
+  subfrac-pkg-add omarchy-chromium
 
   if pgrep -x chromium; then
     if gum confirm "Chromium must be restarted. Ready?"; then

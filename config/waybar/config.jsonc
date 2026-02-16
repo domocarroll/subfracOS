@@ -40,14 +40,14 @@
   },
   "custom/omarchy": {
     "format": "<span font='omarchy'>\ue900</span>",
-    "on-click": "omarchy-menu",
+    "on-click": "subfrac-menu",
     "on-click-right": "xdg-terminal-exec",
     "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
   },
   "custom/update": {
     "format": "",
-    "exec": "omarchy-update-available",
-    "on-click": "omarchy-launch-floating-terminal-with-presentation omarchy-update",
+    "exec": "subfrac-update-available",
+    "on-click": "subfrac-launch-floating-terminal-with-presentation subfrac-update",
     "tooltip-format": "Omarchy update available",
     "signal": 7,
     "interval": 21600
@@ -62,7 +62,7 @@
     "format": "{:L%A %H:%M}",
     "format-alt": "{:L%d %B W%V %Y}",
     "tooltip": false,
-    "on-click-right": "omarchy-launch-floating-terminal-with-presentation omarchy-tz-select"
+    "on-click-right": "subfrac-launch-floating-terminal-with-presentation subfrac-tz-select"
   },
   "network": {
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
@@ -75,7 +75,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "spacing": 1,
-    "on-click": "omarchy-launch-wifi"
+    "on-click": "subfrac-launch-wifi"
   },
   "battery": {
     "format": "{capacity}% {icon}",
@@ -90,7 +90,7 @@
     "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
     "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
     "interval": 5,
-    "on-click": "omarchy-menu power",
+    "on-click": "subfrac-menu power",
     "states": {
       "warning": 20,
       "critical": 10
@@ -127,7 +127,7 @@
     "tooltip": false
   },
   "custom/screenrecording-indicator": {
-    "on-click": "omarchy-cmd-screenrecord",
+    "on-click": "subfrac-cmd-screenrecord",
     "exec": "$OMARCHY_PATH/default/waybar/indicators/screen-recording.sh",
     "signal": 8,
     "return-type": "json"

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-omarchy-refresh-config waybar/config.jsonc
-omarchy-refresh-config waybar/style.css
-omarchy-restart-waybar
+subfrac-refresh-config waybar/config.jsonc
+subfrac-refresh-config waybar/style.css
+subfrac-restart-waybar

@@ -1,3 +1,3 @@
 echo "Install Omarchy theme on Obsidian vaults"
 
-omarchy-theme-set-obsidian
+subfrac-theme-set-obsidian

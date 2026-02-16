@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LOG_FILE="/tmp/omarchy-debug.log"
+LOG_FILE="/tmp/subfrac-debug.log"
 
 cat > "$LOG_FILE" <<EOF
 Date: $(date)
@@ -55,7 +55,7 @@ case "$ACTION" in
     less "$LOG_FILE"
     ;;
   "Save in current directory")
-    cp "$LOG_FILE" "./omarchy-debug.log"
-    echo "✓ Log saved to $(pwd)/omarchy-debug.log"
+    cp "$LOG_FILE" "./subfrac-debug.log"
+    echo "✓ Log saved to $(pwd)/subfrac-debug.log"
     ;;
 esac

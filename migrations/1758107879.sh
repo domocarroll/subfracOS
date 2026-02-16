@@ -20,7 +20,7 @@ PACKAGES=(
 )
 
 for pkg in "${PACKAGES[@]}"; do
-  if ! omarchy-pkg-present "$pkg"; then
+  if ! subfrac-pkg-present "$pkg"; then
     NEEDS_MIGRATION=true
     break
   fi
@@ -34,12 +34,12 @@ fi
 if $NEEDS_MIGRATION; then
   kill -9 $(pgrep -x walker) 2>/dev/null || true
 
-  omarchy-pkg-drop walker-bin walker-bin-debug
+  subfrac-pkg-drop walker-bin walker-bin-debug
 
-  omarchy-pkg-add "${PACKAGES[@]}"
+  subfrac-pkg-add "${PACKAGES[@]}"
 
   source $OMARCHY_PATH/install/config/walker-elephant.sh
 
   rm -rf ~/.config/walker/themes
-  omarchy-refresh-walker
+  subfrac-refresh-walker
 fi

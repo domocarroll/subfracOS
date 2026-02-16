@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if (($# == 0)); then
-  echo "Usage: omarchy-notification-dismiss <summary>"
+  echo "Usage: subfrac-notification-dismiss <summary>"
   exit 1
 fi
 

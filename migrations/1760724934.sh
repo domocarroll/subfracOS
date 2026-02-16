@@ -9,16 +9,16 @@ if ! grep -q "map shift+insert paste_from_clipboard" "$KITTY_CONF"; then
 fi
 
 echo "Update Walker configs"
-omarchy-refresh-walker
+subfrac-refresh-walker
 
 echo "Copy hooks examples"
 cp -r $OMARCHY_PATH/config/omarchy/* $HOME/.config/omarchy/
 
-echo "Add packages for updated omarchy-cmd-screenshot"
-omarchy-pkg-add grim slurp wayfreeze-git
+echo "Add packages for updated subfrac-cmd-screenshot"
+subfrac-pkg-add grim slurp wayfreeze-git
 
 echo "Add nfs support by default to Nautilus"
-omarchy-pkg-add gvfs-nfs
+subfrac-pkg-add gvfs-nfs
 
 if [ ! -d "$HOME/.config/nvim" ]; then
   echo "Add missing nvim config"

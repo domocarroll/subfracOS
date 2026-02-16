@@ -1,12 +1,12 @@
 #!/bin/bash
 
 if (($# == 0)); then
-  echo "Usage: omarchy-launch-or-focus-webapp [window-pattern] [url-and-flags...]"
+  echo "Usage: subfrac-launch-or-focus-webapp [window-pattern] [url-and-flags...]"
   exit 1
 fi
 
 WINDOW_PATTERN="$1"
 shift
-LAUNCH_COMMAND="omarchy-launch-webapp $@"
+LAUNCH_COMMAND="subfrac-launch-webapp $@"
 
-exec omarchy-launch-or-focus "$WINDOW_PATTERN" "$LAUNCH_COMMAND"
+exec subfrac-launch-or-focus "$WINDOW_PATTERN" "$LAUNCH_COMMAND"

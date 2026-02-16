@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# omarchy-theme-remove: Remove a theme from Omarchy by name
-# Usage: omarchy-theme-remove <theme-name>
+# subfrac-theme-remove: Remove a theme from Omarchy by name
+# Usage: subfrac-theme-remove <theme-name>
 
 if [ -z "$1" ]; then
   mapfile -t extra_themes < <(find ~/.config/omarchy/themes -mindepth 1 -maxdepth 1 -type d ! -xtype l -printf '%f\n')
@@ -33,7 +33,7 @@ fi
 
 # Move to the next theme if the current theme is the one being removed
 if [ "$(readlink -f "$CURRENT_DIR/theme")" = "$(readlink -f "$THEME_PATH")" ]; then
-  omarchy-theme-next
+  subfrac-theme-next
 fi
 
 # Now remove the theme directory for THEME_NAME

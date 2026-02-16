@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing VSCode..."
-omarchy-pkg-add visual-studio-code-bin
+subfrac-pkg-add visual-studio-code-bin
 
 mkdir -p ~/.vscode ~/.config/Code/User
 
@@ -22,6 +22,6 @@ EOF
 printf '{\n  "update.mode": "none"\n}\n' > ~/.config/Code/User/settings.json
 
 # Apply Omarchy theme to VSCode
-omarchy-theme-set-vscode
+subfrac-theme-set-vscode
 
 setsid gtk-launch code

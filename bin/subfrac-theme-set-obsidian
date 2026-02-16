@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# omarchy-theme-set-obsidian: Bootstrap and update Omarchy theme for Obsidian
+# subfrac-theme-set-obsidian: Bootstrap and update Omarchy theme for Obsidian
 #
 # - Ensures registry at ~/.local/state/omarchy/obsidian-vaults
 #   - Populates by extracting vault paths from ~/.config/obsidian/obsidian.json

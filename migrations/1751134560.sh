@@ -13,4 +13,4 @@ mkdir -p ~/.local/state/omarchy/migrations
 touch ~/.local/state/omarchy/migrations/1751134560.sh
 
 sudo systemctl restart systemd-timesyncd
-bash omarchy-update-perform
+bash subfrac-update-perform

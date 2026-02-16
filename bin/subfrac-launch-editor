@@ -1,6 +1,6 @@
 #!/bin/bash
 
-omarchy-cmd-present "$EDITOR" || EDITOR=nvim
+subfrac-cmd-present "$EDITOR" || EDITOR=nvim
 
 case "$EDITOR" in
 nvim | vim | nano | micro | hx | helix)

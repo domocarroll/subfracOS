@@ -1,10 +1,10 @@
 #!/bin/bash
 
 if [ "$(uname -r | sed 's/-arch/\.arch/')" != "$(pacman -Q linux | awk '{print $2}')" ]; then
-  gum confirm "Linux kernel has been updated. Reboot?" && omarchy-state clear re*-required && sudo reboot now
+  gum confirm "Linux kernel has been updated. Reboot?" && subfrac-state clear re*-required && sudo reboot now
 
 elif [ -f "$HOME/.local/state/omarchy/reboot-required" ]; then
-  gum confirm "Updates require reboot. Ready?" && omarchy-state clear re*-required && sudo reboot now
+  gum confirm "Updates require reboot. Ready?" && subfrac-state clear re*-required && sudo reboot now
 fi
 
 for file in "$HOME"/.local/state/omarchy/restart-*-required; do
@@ -12,7 +12,7 @@ for file in "$HOME"/.local/state/omarchy/restart-*-required; do
     filename=$(basename "$file")
     service=$(echo "$filename" | sed 's/restart-\(.*\)-required/\1/')
     echo "Restarting $service"
-    omarchy-state clear "$filename"
-    omarchy-restart-"$service"
+    subfrac-state clear "$filename"
+    subfrac-restart-"$service"
   fi
 done

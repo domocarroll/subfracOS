@@ -11,7 +11,7 @@ echo -e "This will reinstall all the default subfracOS packages and reset all de
 
 if gum confirm "Are you sure you want to reinstall and lose all config changes?"; then
   echo "Resetting subfracOS repository"
-  git clone "https://github.com/basecamp/omarchy.git" ~/.local/share/subfrac-new >/dev/null
+  git clone "https://github.com/domocarroll/subfracOS.git" ~/.local/share/subfrac-new >/dev/null
   rm -rf $SUBFRAC_PATH
   mv ~/.local/share/subfrac-new $SUBFRAC_PATH
 

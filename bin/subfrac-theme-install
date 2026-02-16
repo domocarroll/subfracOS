@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# subfrac-theme-install: Install a new theme from a git repo for Omarchy
+# subfrac-theme-install: Install a new theme from a git repo for subfracOS
 # Usage: subfrac-theme-install <git-repo-url>
 
 if [ -z "$1" ]; then

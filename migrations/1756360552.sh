@@ -1,4 +1,4 @@
-echo "Move Omarchy Package Repository after Arch core/extra/multilib and remove AUR"
+echo "Move subfracOS Package Repository after Arch core/extra/multilib and remove AUR"
 
 sudo cp /etc/pacman.conf /etc/pacman.conf.bak
 sudo sed -i '/\[omarchy\]/,+2 d' /etc/pacman.conf

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# subfrac-theme-remove: Remove a theme from Omarchy by name
+# subfrac-theme-remove: Remove a theme from subfracOS by name
 # Usage: subfrac-theme-remove <theme-name>
 
 if [ -z "$1" ]; then

@@ -1,3 +1,3 @@
-echo "Use new Omarchy mirror as default"
+echo "Use new subfracOS mirror as default"
 
 subfrac-refresh-pacman-mirrorlist

@@ -22,7 +22,7 @@ sudo pacman -Syu --noconfirm --needed git
 # Use custom repo if specified, otherwise default to basecamp/omarchy
 SUBFRAC_REPO="${SUBFRAC_REPO:-basecamp/omarchy}"
 
-echo -e "\nCloning Omarchy from: https://github.com/${SUBFRAC_REPO}.git"
+echo -e "\nCloning subfracOS from: https://github.com/${SUBFRAC_REPO}.git"
 rm -rf ~/.local/share/subfrac/
 git clone "https://github.com/${SUBFRAC_REPO}.git" ~/.local/share/subfrac >/dev/null
 

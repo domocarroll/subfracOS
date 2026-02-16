@@ -1,5 +1,5 @@
 [Unit]
-Description=Omarchy Battery Monitor Timer
+Description=subfracOS Battery Monitor Timer
 Requires=subfrac-battery-monitor.service
 
 [Timer]

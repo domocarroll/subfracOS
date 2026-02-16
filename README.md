@@ -1,9 +1,9 @@
-# Omarchy
+# subfracOS
 
-Omarchy is a beautiful, modern & opinionated Linux distribution by DHH.
+subfracOS is a beautiful, modern & opinionated Linux distribution by subfracture, based on omarchy by DHH.
 
-Read more at [omarchy.org](https://omarchy.org).
+Read more at [subfrac.cloud](https://subfrac.cloud).
 
 ## License
 
-Omarchy is released under the [MIT License](https://opensource.org/licenses/MIT).
+subfracOS is released under the [MIT License](https://opensource.org/licenses/MIT).

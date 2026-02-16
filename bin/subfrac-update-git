@@ -2,7 +2,7 @@
 
 set -e
 
-echo -e "\e[32mUpdate Omarchy\e[0m"
+echo -e "\e[32mUpdate subfracOS\e[0m"
 
 git -C $SUBFRAC_PATH pull --autostash
 git -C $SUBFRAC_PATH diff --check || git -C $SUBFRAC_PATH reset --merge

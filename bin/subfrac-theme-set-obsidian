@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# subfrac-theme-set-obsidian: Bootstrap and update Omarchy theme for Obsidian
+# subfrac-theme-set-obsidian: Bootstrap and update subfracOS theme for Obsidian
 #
 # - Ensures registry at ~/.local/state/subfrac/obsidian-vaults
 #   - Populates by extracting vault paths from ~/.config/obsidian/obsidian.json
 # - For each valid vault:
-#   - Ensures .obsidian/themes/Omarchy/{manifest.json, theme.css}
+#   - Ensures .obsidian/themes/subfracOS/{manifest.json, theme.css}
 #   - Updates theme.css (uses current theme’s obsidian.css if present; otherwise generates -- see below)
 
 # Theme automagic generation logic:
@@ -43,17 +43,17 @@ ensure_vaults_file() {
 # Ensure theme directory and minimal manifest exist in a vault
 ensure_theme_scaffold() {
   local vault_path="$1"
-  local theme_dir="$vault_path/.obsidian/themes/Omarchy"
+  local theme_dir="$vault_path/.obsidian/themes/subfracOS"
   mkdir -p "$theme_dir"
   if [ ! -f "$theme_dir/manifest.json" ]; then
     cat >"$theme_dir/manifest.json" <<'EOF'
 {
-  "name": "Omarchy",
+  "name": "subfracOS",
   "version": "1.0.0",
   "minAppVersion": "0.16.0",
-  "description": "Automatically syncs with your current Omarchy system theme colors and fonts",
-  "author": "Omarchy",
-  "authorUrl": "https://omarchy.org"
+  "description": "Automatically syncs with your current subfracOS system theme colors and fonts",
+  "author": "subfracOS",
+  "authorUrl": "https://subfrac.cloud"
 }
 EOF
   fi
@@ -409,7 +409,7 @@ extract_theme_data() {
 
   # Generate CSS with 14-slot system
   cat <<EOF
-/* Omarchy Theme for Obsidian */
+/* subfracOS Theme for Obsidian */
 /* Generated on $(date) from theme: $(basename "$(readlink "$CURRENT_THEME_DIR" 2>/dev/null || echo "unknown")") */
 /* Colors sorted by frequency, backgrounds by distance */
 
@@ -632,13 +632,13 @@ EOF
 
 # Option handling
 if [ "${1:-}" = "--reset" ]; then
-  echo "♻️  Resetting Omarchy themes and registry..."
+  echo "♻️  Resetting subfracOS themes and registry..."
   if [ -f "$VAULTS_FILE" ] && [ -s "$VAULTS_FILE" ]; then
     while IFS= read -r vault_path || [ -n "$vault_path" ]; do
       case "$vault_path" in ""|\#*) continue ;; esac
       vault_path="${vault_path%/}"
       vault_name=$(basename "$vault_path")
-      theme_dir="$vault_path/.obsidian/themes/Omarchy"
+      theme_dir="$vault_path/.obsidian/themes/subfracOS"
       if [ -d "$theme_dir" ]; then
         rm -rf "$theme_dir"
         echo "   ✅ $vault_name (theme removed)"
@@ -671,7 +671,7 @@ while IFS= read -r vault_path || [ -n "$vault_path" ]; do
 
   # Ensure theme files exist for this vault
   ensure_theme_scaffold "$vault_path"
-  THEME_DIR="$vault_path/.obsidian/themes/Omarchy"
+  THEME_DIR="$vault_path/.obsidian/themes/subfracOS"
 
   # Step 3: update theme.css
   if [ -f "$CURRENT_THEME_DIR/obsidian.css" ]; then

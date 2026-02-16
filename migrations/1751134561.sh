@@ -1,4 +1,4 @@
-echo "Add Omarchy Package Repository"
+echo "Add subfracOS Package Repository"
 
 subfrac-refresh-pacman-mirrorlist
 

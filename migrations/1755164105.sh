@@ -1,4 +1,4 @@
-echo "Switch to Omarchy Chromium for synchronized theme switching"
+echo "Switch to subfracOS Chromium for synchronized theme switching"
 
 if subfrac-cmd-present chromium; then
   set_theme_colors() {

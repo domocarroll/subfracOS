@@ -51,14 +51,14 @@ waybar_config=~/.config/waybar/config.jsonc
 if [ -f "$waybar_config" ]; then
   sed -i 's|"on-click-right": "subfrac-launch-terminal"|"on-click-right": "xdg-terminal-exec"|' "$waybar_config"
   sed -i 's|"on-click": "\$TERMINAL -e btop"|"on-click": "xdg-terminal-exec btop"|' "$waybar_config"
-  sed -i 's|"on-click": "\$TERMINAL --class=Wiremix -e wiremix"|"on-click": "xdg-terminal-exec --app-id=com.omarchy.Wiremix -e wiremix"|' "$waybar_config"
+  sed -i 's|"on-click": "\$TERMINAL --class=Wiremix -e wiremix"|"on-click": "xdg-terminal-exec --app-id=com.subfrac.Wiremix -e wiremix"|' "$waybar_config"
   subfrac-state set restart-waybar-required
 fi
 
 # Update hyprland window rules to use DNS-format class names
 system_conf=~/.config/hypr/apps/system.conf
 if [ -f "$system_conf" ]; then
-  if grep -q 'class:(.*|Impala|' "$system_conf" || grep -q 'class:(.*|Wiremix|' "$system_conf" || grep -q '|Omarchy|' "$system_conf"; then
-    sed -i 's/\bImpala\b/com.omarchy.Impala/g; s/\bWiremix\b/com.omarchy.Wiremix/g; s/|Omarchy|/|com.omarchy.Omarchy|/g' "$system_conf"
+  if grep -q 'class:(.*|Impala|' "$system_conf" || grep -q 'class:(.*|Wiremix|' "$system_conf" || grep -q '|subfracOS|' "$system_conf"; then
+    sed -i 's/\bImpala\b/com.subfrac.Impala/g; s/\bWiremix\b/com.subfrac.Wiremix/g; s/|subfracOS|/|com.subfrac.subfracOS|/g' "$system_conf"
   fi
 fi

@@ -3,7 +3,7 @@
 # Exit immediately if a command exits with a non-zero status
 set -eEo pipefail
 
-# Define Omarchy locations
+# Define subfracOS locations
 export SUBFRAC_PATH="$HOME/.local/share/subfrac"
 export SUBFRAC_INSTALL="$SUBFRAC_PATH/install"
 export SUBFRAC_INSTALL_LOG_FILE="/var/log/subfrac-install.log"

@@ -58,7 +58,7 @@ start_install_log() {
 
   export SUBFRAC_START_TIME=$(date '+%Y-%m-%d %H:%M:%S')
 
-  echo "=== Omarchy Installation Started: $SUBFRAC_START_TIME ===" >>"$SUBFRAC_INSTALL_LOG_FILE"
+  echo "=== subfracOS Installation Started: $SUBFRAC_START_TIME ===" >>"$SUBFRAC_INSTALL_LOG_FILE"
   start_log_output
 }
 
@@ -68,7 +68,7 @@ stop_install_log() {
 
   if [[ -n ${SUBFRAC_INSTALL_LOG_FILE:-} ]]; then
     SUBFRAC_END_TIME=$(date '+%Y-%m-%d %H:%M:%S')
-    echo "=== Omarchy Installation Completed: $SUBFRAC_END_TIME ===" >>"$SUBFRAC_INSTALL_LOG_FILE"
+    echo "=== subfracOS Installation Completed: $SUBFRAC_END_TIME ===" >>"$SUBFRAC_INSTALL_LOG_FILE"
     echo "" >>"$SUBFRAC_INSTALL_LOG_FILE"
     echo "=== Installation Time Summary ===" >>"$SUBFRAC_INSTALL_LOG_FILE"
 
@@ -96,7 +96,7 @@ stop_install_log() {
       SUBFRAC_MINS=$((SUBFRAC_DURATION / 60))
       SUBFRAC_SECS=$((SUBFRAC_DURATION % 60))
 
-      echo "Omarchy:     ${SUBFRAC_MINS}m ${SUBFRAC_SECS}s" >>"$SUBFRAC_INSTALL_LOG_FILE"
+      echo "subfracOS:   ${SUBFRAC_MINS}m ${SUBFRAC_SECS}s" >>"$SUBFRAC_INSTALL_LOG_FILE"
 
       if [ -n "$ARCH_DURATION" ]; then
         TOTAL_DURATION=$((ARCH_DURATION + SUBFRAC_DURATION))

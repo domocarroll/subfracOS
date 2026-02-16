@@ -7,19 +7,19 @@ if [ "$EUID" -eq 0 ]; then
   exit 1
 fi
 
-echo -e "This will reinstall all the default Omarchy packages and reset all default configs.\nWarning: All changes to configs will be lost.\n"
+echo -e "This will reinstall all the default subfracOS packages and reset all default configs.\nWarning: All changes to configs will be lost.\n"
 
 if gum confirm "Are you sure you want to reinstall and lose all config changes?"; then
-  echo "Resetting Omarchy repository"
+  echo "Resetting subfracOS repository"
   git clone "https://github.com/basecamp/omarchy.git" ~/.local/share/subfrac-new >/dev/null
   rm -rf $SUBFRAC_PATH
   mv ~/.local/share/subfrac-new $SUBFRAC_PATH
 
-  echo "Reinstalling missing Omarchy packages"
+  echo "Reinstalling missing subfracOS packages"
   mapfile -t packages < <(grep -v '^#' "$SUBFRAC_PATH/install/subfrac-base.packages" | grep -v '^$')
   sudo pacman -Syu --noconfirm --needed "${packages[@]}"
 
-  echo "Resetting all Omarchy configs"
+  echo "Resetting all subfracOS configs"
   cp -R ~/.local/share/subfrac/config/* ~/.config/
   cp ~/.local/share/subfrac/default/bashrc ~/.bashrc
   echo '[[ -f ~/.bashrc ]] && . ~/.bashrc' | tee ~/.bash_profile >/dev/null

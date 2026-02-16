@@ -1,6 +1,6 @@
 # Changes require a restart to take effect.
 
-# Ensure Omarchy bins are in the path
+# Ensure subfracOS bins are in the path
 export SUBFRAC_PATH=$HOME/.local/share/subfrac
 export PATH=$SUBFRAC_PATH/bin:$PATH
 

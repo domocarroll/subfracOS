@@ -66,7 +66,7 @@
       "type": "command",
       "key": "\ue900 OS",
       "keyColor": "blue",
-      "text": "version=$(subfrac-version); echo \"Omarchy $version\""
+      "text": "version=$(subfrac-version); echo \"subfracOS $version\""
     },
     {
       "type": "command",

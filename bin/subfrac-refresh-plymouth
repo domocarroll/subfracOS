@@ -1,7 +1,7 @@
 #!/bin/bash
 
-sudo cp ~/.local/share/subfrac/default/plymouth/* /usr/share/plymouth/themes/omarchy/
-sudo plymouth-set-default-theme omarchy
+sudo cp ~/.local/share/subfrac/default/plymouth/* /usr/share/plymouth/themes/subfrac/
+sudo plymouth-set-default-theme subfrac
 
 if command -v limine-mkinitcpio &>/dev/null; then
   sudo limine-mkinitcpio

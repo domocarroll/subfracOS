@@ -387,7 +387,7 @@ show_remove_menu() {
 }
 
 show_update_menu() {
-  case $(menu "Update" " Omarchy\n  Config\n󰸌  Extra Themes\n  Process\n󰇅  Hardware\n  Firmware\n  Password\n  Timezone\n  Time") in
+  case $(menu "Update" " subfracOS\n  Config\n󰸌  Extra Themes\n  Process\n󰇅  Hardware\n  Firmware\n  Password\n  Timezone\n  Time") in
   *subfracOS*) present_terminal subfrac-update ;;
   *Config*) show_update_config_menu ;;
   *Themes*) present_terminal subfrac-theme-update ;;

@@ -1,7 +1,7 @@
 if command -v limine &>/dev/null; then
   sudo pacman -S --noconfirm --needed limine-snapper-sync limine-mkinitcpio-hook
 
-  sudo tee /etc/mkinitcpio.conf.d/omarchy_hooks.conf <<EOF >/dev/null
+  sudo tee /etc/mkinitcpio.conf.d/subfrac_hooks.conf <<EOF >/dev/null
 HOOKS=(base udev plymouth keyboard autodetect microcode modconf kms keymap consolefont block encrypt filesystems fsck btrfs-overlayfs)
 EOF
 
@@ -28,7 +28,7 @@ EOF
   CMDLINE=$(grep "^[[:space:]]*cmdline:" "$limine_config" | head -1 | sed 's/^[[:space:]]*cmdline:[[:space:]]*//')
 
   sudo tee /etc/default/limine <<EOF >/dev/null
-TARGET_OS_NAME="Omarchy"
+TARGET_OS_NAME="subfracOS"
 
 ESP_PATH="/boot"
 
@@ -36,7 +36,7 @@ KERNEL_CMDLINE[default]="$CMDLINE"
 KERNEL_CMDLINE[default]+="quiet splash"
 
 ENABLE_UKI=yes
-CUSTOM_UKI_NAME="omarchy"
+CUSTOM_UKI_NAME="subfrac"
 
 ENABLE_LIMINE_FALLBACK=yes
 
@@ -125,13 +125,13 @@ fi
 #   ! cat /sys/class/dmi/id/bios_vendor 2>/dev/null | grep -qi "American Megatrends" &&
 #   ! cat /sys/class/dmi/id/bios_vendor 2>/dev/null | grep -qi "Apple"; then
 #
-#   uki_file=$(find /boot/EFI/Linux/ -name "omarchy*.efi" -printf "%f\n" 2>/dev/null | head -1)
+#   uki_file=$(find /boot/EFI/Linux/ -name "subfrac*.efi" -printf "%f\n" 2>/dev/null | head -1)
 #
 #   if [[ -n "$uki_file" ]]; then
 #     sudo efibootmgr --create \
 #       --disk "$(findmnt -n -o SOURCE /boot | sed 's/p\?[0-9]*$//')" \
 #       --part "$(findmnt -n -o SOURCE /boot | grep -o 'p\?[0-9]*$' | sed 's/^p//')" \
-#       --label "Omarchy" \
+#       --label "subfracOS" \
 #       --loader "\\EFI\\Linux\\$uki_file"
 #   fi
 # fi
